@@ -1,0 +1,93 @@
+:root{
+    --azul-OP: rgba(0,178,239,255);
+    --white-generic: white;
+    --yellow-OP: rgba(248,216,104,255);
+}
+
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--azul-OP);
+    color: white;
+    height: 10vh;
+}
+
+header h1{
+    font-size: 35px;
+}
+
+    header ul {
+        display: flex;
+    }
+
+    header ul li{
+        margin: 0 2em;
+        font-size: 18px;
+    }
+
+    header ul li a{
+        color: white;
+    }
+
+    header ul li a:hover {
+        transition: 0.9s;
+        color: var(--yellow-OP);
+      }
+
+main #intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+}
+
+main #intro .container{
+    width: 40%;
+    margin-right: 5em;
+    text-align: center;
+}
+
+main #intro .container h1 {
+    color: var(--azul-OP);
+    font-size: 3em;
+}
+
+main #intro .container p{
+    text-align: center;
+    font-size: 16px;
+    text-indent: 2em;
+    margin: 2em 0;
+    line-height: 1.5em;
+}
+
+main #intro .container button{
+    background-color: var(--azul-OP);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white-generic);
+    
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 2em;
+    cursor: pointer;
+}
+
+#luffyImg img {
+    border-radius: 10px;
+    border: 3px solid var(--azul-OP);
+}
