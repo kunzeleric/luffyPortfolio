@@ -26,7 +26,7 @@ header {
     align-items: center;
     background: var(--azul-OP);
     color: white;
-    height: 12vh;
+    height: 120px;
 }
 
 header h1 {
@@ -258,32 +258,31 @@ footer{
     display:flex;
     justify-content: space-between;
     text-align: center;
-    height: 20vh;
+    height: 200px;
     color: var(--white-generic);
     background-color: var(--azul-OP);
+    padding: 0 2em 0 2em;
 }
 
+footer #rodapePic{
+    padding-top: 1em;
+}
 
 footer #rodapePic img{
-    margin-top:1em;
-    margin-left:3em;
-    width:100px;
-    height:170px;
-    
+    height:100%;
 }
 
 footer #rodapeMsg{
     display:flex;
     justify-content: center;
     align-items: center;
-    height:90%;
+    height:100%;
     font-size: 3em;
 }
 
 footer #owner{
     display: flex;
     align-items: center;
-    margin-right: 2em;
     font-weight: 600;
     font-size: 1em;
 }
