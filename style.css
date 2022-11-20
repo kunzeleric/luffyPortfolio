@@ -1,7 +1,7 @@
-:root{
-    --azul-OP: rgba(0,178,239,255);
+:root {
+    --azul-OP: rgba(0, 178, 239, 255);
     --white-generic: white;
-    --yellow-OP: rgba(248,216,104,255);
+    --yellow-OP: rgba(248, 216, 104, 255);
 }
 
 
@@ -15,8 +15,10 @@
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
+/*Cabeçalho & Menu*/
 
 header {
     display: flex;
@@ -24,39 +26,54 @@ header {
     align-items: center;
     background: var(--azul-OP);
     color: white;
-    height: 10vh;
+    height: 12vh;
 }
 
-header h1{
-    font-size: 35px;
+header h1 {
+    font-size: 3em;
+    width: 20%;
+    margin-left: 5%;
 }
 
-    header ul {
-        display: flex;
-    }
+header ul {
+    display: flex;
+}
 
-    header ul li{
-        margin: 0 2em;
-        font-size: 18px;
-    }
+header ul li {
+    margin: 0 1em;
+    font-size: 1.1em;
+}
 
-    header ul li a{
-        color: white;
-    }
+header ul li a {
+    color: white;
+}
 
-    header ul li a:hover {
-        transition: 0.9s;
-        color: var(--yellow-OP);
-      }
+header ul li a:hover {
+    transition: 0.9s;
+    color: var(--yellow-OP);
+}
 
-main #intro{
+header img {
+    width: 300px;
+    height: 170px;
+    margin-left: 5em;
+}
+
+
+/*Introd*/
+
+main{
+    margin-bottom: 4em;
+}
+
+main #intro {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 4em;
 }
 
-main #intro .container{
+main #intro .container {
     width: 40%;
     margin-right: 5em;
     text-align: center;
@@ -67,27 +84,206 @@ main #intro .container h1 {
     font-size: 3em;
 }
 
-main #intro .container p{
+main #intro .container p {
     text-align: center;
-    font-size: 16px;
+    font-size: 1em;
     text-indent: 2em;
     margin: 2em 0;
     line-height: 1.5em;
 }
 
-main #intro .container button{
+main #intro .container button {
     background-color: var(--azul-OP);
     font-size: 18px;
     font-weight: 700;
     color: var(--white-generic);
-    
+
     padding: 10px;
     border-radius: 10px;
     margin-top: 2em;
     cursor: pointer;
 }
 
-#luffyImg img {
+main #intro .container button:hover {
+    transition: 0.9s;
+    color: var(--yellow-OP);
+}
+
+main #luffyImg img {
     border-radius: 10px;
     border: 3px solid var(--azul-OP);
+}
+
+/*Habilidades*/
+
+main #skills {
+    margin-top: 4em;
+}
+
+main #skills .skillsTitle {
+    height: 8vh;
+    background-color: var(--azul-OP);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main #skills .skillsTitle h2 {
+    color: var(--white-generic);
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+main #skills .content-skills {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 13em;
+    margin-top: 4em;
+}
+
+main #skills .content-skills .skills {
+    text-align: center;
+}
+
+
+main #skills .content-skills .skills p {
+    font-size: 1.2rem;
+    color: var(--azul-OP);
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+main #skills .content-skills .skills img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border: 3px solid var(--azul-OP);
+}
+
+/*Tripulação*/
+
+main #crewmates {
+    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+main #crewmates .content-crew {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 4em; 
+}
+
+main #crewmates .crewTitle h2 {
+    font-size: 2.5em;
+    color: var(--white-generic);
+    font-weight: 600;
+}
+
+main #crewmates .crewTitle {
+    height: 8vh;
+    background-color: var(--azul-OP);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main #crewmates .content-crew .crew img {
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    border: 3px solid var(--azul-OP);
+}
+
+main #crewmates .content-crew .crew p {
+    font-size: 1rem;
+    color: var(--azul-OP);
+    font-weight: 600;
+    margin-bottom: 2em;
+    margin-top: 0.3rem;
+}
+
+/*Conquistas*/
+
+main #conquistas {
+    text-align: center;
+    margin-bottom: 2em
+}
+
+main #conquistas .conquistasTitle{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azul-OP);
+    height: 8vh;
+    margin-bottom: 4em;
+}
+
+main #conquistas .conquistasTitle h2 {
+    font-size: 2.5em;
+    color: var(--white-generic);
+    font-weight: 600;
+}
+
+main #conquistas .content-conquistas {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 2em;
+}
+
+main #conquistas .content-conquistas .conquer img {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    border: 3px solid var(--azul-OP);
+}
+
+main #conquistas .content-conquistas .conquer .title {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--azul-OP);
+    font-weight: 600;
+}
+
+main #conquistas .content-conquistas .conquer p {
+    font-size: 1rem;
+    margin-top: 0.5em;
+}
+
+/*Rodapé*/
+
+footer{
+    display:flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 20vh;
+    color: var(--white-generic);
+    background-color: var(--azul-OP);
+}
+
+
+footer #rodapePic img{
+    margin-top:1em;
+    margin-left:3em;
+    width:100px;
+    height:170px;
+    
+}
+
+footer #rodapeMsg{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:90%;
+    font-size: 3em;
+}
+
+footer #owner{
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+    font-weight: 600;
+    font-size: 1em;
 }
