@@ -54,8 +54,7 @@ header ul li a:hover {
 }
 
 header img {
-    width: 300px;
-    height: 170px;
+    height: 100%;
     margin-left: 5em;
 }
 
@@ -110,14 +109,18 @@ main #intro .container button:hover {
 }
 
 main #luffyImg img {
+    height:100%;
+    width:100%;
     border-radius: 10px;
-    border: 3px solid var(--azul-OP);
+    border: 4px solid transparent;
+    animation: colors 4s infinite;
 }
 
 /*Habilidades*/
 
 main #skills {
     margin-top: 4em;
+    margin-bottom: 4em;
 }
 
 main #skills .skillsTitle {
@@ -136,9 +139,8 @@ main #skills .skillsTitle h2 {
 }
 
 main #skills .content-skills {
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 13em;
+    display: flex;
+    justify-content: space-around;
     margin-top: 4em;
 }
 
@@ -155,10 +157,10 @@ main #skills .content-skills .skills p {
 }
 
 main #skills .content-skills .skills img {
-    width: 300px;
-    height: 200px;
+    width: 90%;
     border-radius: 10px;
-    border: 3px solid var(--azul-OP);
+    border: 4px solid transparent;
+    animation: colors 4s infinite; /* propriedade do Keyframe*/
 }
 
 /*Tripulação*/
@@ -191,10 +193,9 @@ main #crewmates .crewTitle {
 }
 
 main #crewmates .content-crew .crew img {
-    width: 250px;
-    height: 350px;
     border-radius: 10px;
-    border: 3px solid var(--azul-OP);
+    border: 4px solid transparent;
+    animation: colors 4s infinite; /* propriedade do Keyframe*/
 }
 
 main #crewmates .content-crew .crew p {
@@ -230,14 +231,14 @@ main #conquistas .conquistasTitle h2 {
 main #conquistas .content-conquistas {
     display: grid;
     grid-template-columns: auto auto;
+    justify-content: space-around;
     row-gap: 2em;
 }
 
 main #conquistas .content-conquistas .conquer img {
-    width: 500px;
-    height: 300px;
     border-radius: 10px;
-    border: 3px solid var(--azul-OP);
+    border: 4px solid transparent;
+    animation: colors 4s infinite; /* propriedade do Keyframe*/
 }
 
 main #conquistas .content-conquistas .conquer .title {
@@ -269,7 +270,7 @@ footer #rodapePic{
 }
 
 footer #rodapePic img{
-    height:100%;
+    height: 100%;
 }
 
 footer #rodapeMsg{
@@ -286,3 +287,71 @@ footer #owner{
     font-weight: 600;
     font-size: 1em;
 }
+
+/* Keyframes para as bordas */
+
+
+@keyframes colors {
+    0% {
+      border-color: #D9D604;
+    }
+  
+    25% {
+      border-color: #7D2526;
+    }
+  
+    50% {
+      border-color: #B30B0C;
+    }
+  
+    75% {
+      border-color: #5A9DC7;
+    }
+  
+    100% {
+      border-color: #0283D4 ;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    main #conquistas .content-conquistas .conquer img {
+      width: 10rem;
+    }
+
+    main #conquistas .content-conquistas .conquer .title {
+        font-size: 0.8rem;
+    }
+
+    main #conquistas .content-conquistas .conquer p {
+        font-size: 0.7rem;
+    }
+
+    main #crewmates .content-crew .crew img {
+        width: 7rem;
+    }
+
+    footer{
+        padding: 0;
+    }
+
+    footer #rodapePic img{
+        width: 5rem;
+        height:auto;
+        padding-left: 2rem;
+    }
+
+    footer #rodapeMsg{
+        font-size: 1.2rem;
+        margin-left: 0.1rem;
+        direction: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer #owner{
+        direction: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        font-size: 0.6rem;
+    }
+  }
